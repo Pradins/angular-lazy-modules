@@ -18,5 +18,7 @@ export class LazyComponent extends CounterComponent {
     entryComponents: [LazyComponent]
 })
 export class MobileLazyModule {
-    static entry = LazyComponent;
+    static componentList = {
+        'lazy-comp': LazyComponent
+    };
 }

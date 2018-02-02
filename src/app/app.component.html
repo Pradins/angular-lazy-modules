@@ -1,4 +1,7 @@
 <h1>
   {{title}}
 </h1>
-<div #container></div>
+<div>
+  <lazy-comp *ngFor = " let item of [1 , 2 , 3]" dynamicPlatform></lazy-comp>
+</div>
+<!-- <div #container></div> -->
