@@ -17,9 +17,8 @@ import { provideRoutes } from '@angular/router';
   ],
   providers: [
       SystemJsNgModuleLoader,
-      provideRoutes([
-          { loadChildren: 'app/lazy/lazy.module#LazyModule' }
-      ])
+      provideRoutes([ { loadChildren: 'app/lazy/lazy.module#LazyModule' },
+      { loadChildren: 'app/lazy/mobileLazy.module#MobileLazyModule' }])
   ],
   bootstrap: [AppComponent]
 })

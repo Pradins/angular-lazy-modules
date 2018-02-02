@@ -5,12 +5,11 @@ import { CounterComponent } from 'app/lazy/counter-component';
 @Component({
     selector: 'lazy-comp',
     template: `
-        <h2>Lazy loaded counter {{ counter }}</h2>
+        <h2>Lazy loaded counter mobile {{ counter }}</h2>
         <button (click)="increment()">Increment</button>
     `
 })
 export class LazyComponent extends CounterComponent {
-
 }
 
 @NgModule({
@@ -18,6 +17,6 @@ export class LazyComponent extends CounterComponent {
     declarations: [LazyComponent],
     entryComponents: [LazyComponent]
 })
-export class LazyModule {
+export class MobileLazyModule {
     static entry = LazyComponent;
 }
