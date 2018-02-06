@@ -6,7 +6,7 @@ import { CounterComponent } from './counter/counter.component';
 import { RouterModule } from '@angular/router';
 import { DemoComponent } from './demo/demo.component';
 
-export const IDENTIFIER = 'app/feature/feature.module#FeatureModule';
+export const IDENTIFIER = 'app/feature2/feature2.module#Feature2Module';
 
 const platformComponents: ModuleWithProviders = DynamicPlatformModule.configure({
 	module: IDENTIFIER,
@@ -32,4 +32,4 @@ const platformComponents: ModuleWithProviders = DynamicPlatformModule.configure(
 	entryComponents: [CounterComponent, CounterMobileComponent],
 	declarations: [DemoComponent, CounterComponent, CounterMobileComponent]
 })
-export class FeatureModule { }
+export class Feature2Module { }

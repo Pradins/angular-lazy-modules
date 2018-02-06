@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { provideRoutes, RouterModule } from '@angular/router';
 import { FeatureModule, IDENTIFIER as FEATURE_MODULE } from 'app/feature/feature.module';
+import { Feature2Module, IDENTIFIER as FEATURE2_MODULE } from 'app/feature2/feature2.module';
 
 
 
@@ -19,15 +20,14 @@ import { FeatureModule, IDENTIFIER as FEATURE_MODULE } from 'app/feature/feature
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		FeatureModule,
 		RouterModule.forRoot([
 			{ path: '', pathMatch: 'full', component: OtherComponent },
-			{ loadChildren: 'app/feature/feature.module#FeatureModule' }
+			{ path: 'feature' , loadChildren: FEATURE_MODULE },
+			{ path: 'feature2' , loadChildren: FEATURE2_MODULE }
 		])
 	],
 	providers: [
-		SystemJsNgModuleLoader,
-
+		SystemJsNgModuleLoader
 	],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 	entryComponents: [OtherComponent],

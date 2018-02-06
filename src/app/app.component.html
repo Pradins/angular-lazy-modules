@@ -1,9 +1,14 @@
 <h1>
   {{title}}
 </h1>
-<div>
-  <!-- <lazy-comp *ngFor = " let item of [1 , 2 , 3]" dynamicPlatform></lazy-comp> -->
-</div>
-<!-- <div #container></div> -->
+<a [routerLink]="['/']" >
+  home
+</a>
+<a [routerLink]="['/feature']" >
+  feature
+</a>
+<a [routerLink]="['/feature2']" >
+  feature 2
+</a>
 
 <router-outlet></router-outlet>

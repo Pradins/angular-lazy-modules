@@ -19,20 +19,17 @@ export class DynamicPlatformService {
 	}
 
 	public getComponent(componentName: string): Promise<ComponentFactory<any>> {
-		/* const promise = new Promise<ComponentFactory<any>>((resolve, reject) => {
-			// const entryComponent = OtherComponent; // this.platformMap[componentName];
-			// const component = this.module.componentFactoryResolver.resolveComponentFactory(entryComponent);
-			resolve(component);
-		}); */
 
+		const component = this.platformMap.get(componentName);
 		const promise = new Promise<ComponentFactory<any>>((resolve, reject) => {
-			this.loader.load(this.moduleId).then((moduleFactory: NgModuleFactory<any>) => {
+			// TODO: get the reference of the module without the loader
+			this.loader.load(component.module).then((moduleFactory: NgModuleFactory<any>) => {
 
-				const entryComponent = this.platformMap[componentName];
+				const entryComponent = component.class;
 				const moduleRef = moduleFactory.create(this.injector);
 
-				const component = moduleRef.componentFactoryResolver.resolveComponentFactory(entryComponent);
-				resolve(component);
+				const componentFactory = moduleRef.componentFactoryResolver.resolveComponentFactory(entryComponent);
+				resolve(componentFactory);
 
 
 			});
