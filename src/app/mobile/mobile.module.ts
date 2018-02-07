@@ -13,7 +13,7 @@ import { MobileComponent } from './mobile.component';
     RouterModule.forChild(mobileRouting),
     CoreModule,
     GoalsModule,
-    TalksModule
+    TalksModule,
   ],
   declarations: [MobileComponent],
   exports: [RouterModule]

@@ -13,7 +13,6 @@ export class GoalComponent extends GoalAbstract implements OnInit {
   }
 
   ngOnInit() {
-    this.test();
   }
 
   public overrideTest(): void {

@@ -1,5 +1,4 @@
-export abstract class GoalAbstract {
-
+export abstract class GoalAbstract{
   constructor() {}
 
   protected test(): void {
