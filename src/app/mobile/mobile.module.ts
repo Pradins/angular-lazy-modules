@@ -6,6 +6,8 @@ import { CoreModule } from '../core/core.module';
 import { GoalsModule } from './goals/goals.module';
 import { TalksModule } from './talks/talks.module';
 import { MobileComponent } from './mobile.component';
+import {environment} from '../../environments/environment';
+import {ServiceWorkerModule} from '@angular/service-worker';
 
 @NgModule({
   imports: [
