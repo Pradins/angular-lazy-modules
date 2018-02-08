@@ -18,7 +18,6 @@ import {environment} from '../environments/environment';
     DesktopModule,
     MobileModule,
     environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
-
   ],
   providers: [],
   bootstrap: [AppComponent]
