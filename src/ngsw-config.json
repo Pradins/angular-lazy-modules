@@ -23,7 +23,7 @@
         "/assets/**"
       ],
       "urls": [
-        "/**"
+        "https://maps.googleapis.com/**"
       ]
     }
   }]

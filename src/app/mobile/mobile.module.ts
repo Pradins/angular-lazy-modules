@@ -6,6 +6,7 @@ import { CoreModule } from '../core/core.module';
 import { GoalsModule } from './goals/goals.module';
 import { TalksModule } from './talks/talks.module';
 import { MobileComponent } from './mobile.component';
+import {GoogleMapsLoaderService} from '../core/services/loadGoogleMapsApi/loadGoogleMapsApi';
 
 @NgModule({
   imports: [
@@ -14,6 +15,9 @@ import { MobileComponent } from './mobile.component';
     CoreModule,
     GoalsModule,
     TalksModule,
+  ],
+  providers: [
+    GoogleMapsLoaderService
   ],
   declarations: [MobileComponent],
   exports: [RouterModule]
