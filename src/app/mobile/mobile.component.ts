@@ -16,13 +16,13 @@ export class MobileComponent implements OnInit {
 
   ngOnInit() {
     this.callGoogleApi();
-    // this.http.get('https://peopleos-4200.develop.umantis.com/mdm/rest/identities/details').subscribe((response) => {
-    //   if (response['first_name'] && response['last_name']) {
-    //     this.userFullName = response['first_name'] + response['last_name'];
-    //   }
-    // }, (error) => {
-    //   this.userFullName = 'SYSTEM DATA OFFLINE';
-    // });
+    this.http.get('https://peopleos-4200.develop.umantis.com/mdm/rest/identities/details').subscribe((response) => {
+      if (response['first_name'] && response['last_name']) {
+        this.userFullName = response['first_name'] + response['last_name'];
+      }
+    }, (error) => {
+      this.userFullName = 'SYSTEM DATA OFFLINE';
+    });
   }
 
   callGoogleApi() {

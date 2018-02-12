@@ -8,6 +8,8 @@ import {MobileModule} from './mobile/mobile.module';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {HttpClientModule} from '@angular/common/http';
+import {SharedModule} from './shared/shared.module';
+import {CookieModule, CookieService} from 'ngx-cookie';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {HttpClientModule} from '@angular/common/http';
     RouterModule.forRoot(appRouting),
     DesktopModule,
     MobileModule,
-    ServiceWorkerModule.register('ngsw-worker.js'),
+    SharedModule,
+    CookieModule.forRoot(),
+    environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : [],
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,5 +8,5 @@ ng build --prod
 #--out dist/ngsw-manifest.json
 
 # Serve
-cd dist
-http-server
+http-server "./dist" --cors -a "peopleos-4200.develop.umantis.com" -S -p 4200
+
